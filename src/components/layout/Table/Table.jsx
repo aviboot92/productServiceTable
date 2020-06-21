@@ -40,17 +40,33 @@ const tableIcons = {
 
  export default function Table({dataInfo}) {
 
-    const [columns, setColumns] = useState([]);
+    const columns = [
+        { title: 'AcademyID', field: 'academyId' },
+        { title: 'Low Risk', field: 'lowRisk', type: 'numeric' },
+        { title: 'High Risk', field: 'highRisk', type: 'numeric' },
+        { title: 'Total', field: 'total', type: 'numeric' },
+      ];
+
     const [data, setData] = useState([]);
 
     useEffect(() =>{
         const schoolIDs = getSchoolIdsList(dataInfo);
         console.log(schoolIDs);
+        const buildData = (dataInfo, schoolIDs) => {
+            const data = schoolIDs.map((school, index)=>{
+                return{
+                    academyId : school
+                }
+            });
+            setData(data);
+        }
+
+        buildData(dataInfo,schoolIDs);
     }, [dataInfo]);
 
     const getSchoolIdsList = dataInfo =>{  
         const schoolIDs = [];
-        dataInfo.forEach((item) => {
+         dataInfo.forEach((item) => {
             if(schoolIDs.indexOf(item.academyId) === -1) schoolIDs.unshift(item.academyId);
         });
         return schoolIDs
@@ -61,19 +77,8 @@ const tableIcons = {
       <MaterialTable
         title="Issue devices count tracker"
         icons={tableIcons}
-        columns={[
-          { title: 'Surname', field: 'surname' },
-          { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-          {
-            title: 'Birth Place',
-            field: 'birthCity',
-            lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
-          },
-        ]}
-        data={[
-          { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-          { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-        ]}
+        columns={columns}
+        data={data}
         options={{
           headerStyle: {
             backgroundColor: '#01579b',
@@ -84,5 +89,10 @@ const tableIcons = {
       </div>
     )
   }
+
+//   [
+//     { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+//     { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+//   ]
 
   
