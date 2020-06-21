@@ -43,19 +43,35 @@ const tableIcons = {
     const columns = [
         { title: 'AcademyID', field: 'academyId' },
         { title: 'Low Risk', field: 'lowRisk', type: 'numeric' },
-        { title: 'High Risk', field: 'highRisk', type: 'numeric' },
+        { title: 'Need Replacement', field: 'highRisk', type: 'numeric' },
         { title: 'Total', field: 'total', type: 'numeric' },
       ];
 
     const [data, setData] = useState([]);
+
+    const [state, setState] = useState({})
 
     useEffect(() =>{
         const schoolIDs = getSchoolIdsList(dataInfo);
         console.log(schoolIDs);
         const buildData = (dataInfo, schoolIDs) => {
             const data = schoolIDs.map((school, index)=>{
+                const lowRisk = [];
+                const highRisk = [];
+                dataInfo.forEach((item, i) => {
+                    if(item.academyId === school){
+                        if(item.avgDailyDischarge > 0.3 ){
+                            highRisk.unshift(item)
+                        } else if(item.avgDailyDischarge < 0.3 && item.avgDailyDischarge > 0.2){
+                            lowRisk.unshift(item);
+                        }
+                    }
+                });
                 return{
-                    academyId : school
+                    academyId : school,
+                    lowRisk: lowRisk.length,
+                    highRisk: highRisk.length,
+                    total: highRisk.length + lowRisk.length
                 }
             });
             setData(data);
