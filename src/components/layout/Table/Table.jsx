@@ -55,6 +55,7 @@ const tableIcons = {
         const schoolIDs = getSchoolIdsList(dataInfo);
         console.log(schoolIDs);
         const buildData = (dataInfo, schoolIDs) => {
+            let tempState = {};
             const data = schoolIDs.map((school, index)=>{
                 const lowRisk = [];
                 const highRisk = [];
@@ -67,6 +68,17 @@ const tableIcons = {
                         }
                     }
                 });
+                
+                tempState =  {
+                    ...tempState,
+                    [school]: {
+                        highRisk,
+                        lowRisk,
+                        total: [...lowRisk, ...highRisk]
+                    }
+                }
+
+                setState(tempState)
                 return{
                     academyId : school,
                     lowRisk: lowRisk.length,
@@ -106,9 +118,5 @@ const tableIcons = {
     )
   }
 
-//   [
-//     { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-//     { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-//   ]
 
   
