@@ -62,14 +62,11 @@ export default function Table({dataInfo}) {
     const [data,
         setData] = useState([]);
 
-    const [state,
-        setState] = useState({})
+
 
     useEffect(() => {
         const schoolIDs = getSchoolIdsList(dataInfo);
-        console.log(schoolIDs);
         const buildData = (dataInfo, schoolIDs) => {
-            let tempState = {};
             const data = schoolIDs.map((school, index) => {
                 const lowRisk = [];
                 const highRisk = [];
@@ -82,20 +79,6 @@ export default function Table({dataInfo}) {
                         }
                     }
                 });
-
-                tempState = {
-                    ...tempState,
-                    [school]: {
-                        highRisk,
-                        lowRisk,
-                        total: [
-                            ...lowRisk,
-                            ...highRisk
-                        ]
-                    }
-                }
-
-                setState(tempState)
                 return {
                     academyId: school,
                     lowRisk: lowRisk.length,
@@ -137,7 +120,7 @@ export default function Table({dataInfo}) {
                 }
             }}
                 detailPanel={rowData => {
-                return (<DialogTable />)
+                return (<DialogTable data={rowData.totalData}/>)
             }}
                 onRowClick={(event, rowData, togglePanel) => togglePanel()}/>
         </div>
