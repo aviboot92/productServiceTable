@@ -10,14 +10,14 @@ const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const data = datainfo();
-    setData(data);
+    const res = datainfo();
+    setData(res);
   }, []);
 
   return (
     <Fragment>
       <NavBar />
-      <Table data={data} />
+      <Table dataInfo={data} />
     </Fragment>
   );
 }

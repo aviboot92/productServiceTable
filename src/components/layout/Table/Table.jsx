@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import { forwardRef } from 'react';
 
@@ -38,24 +38,30 @@ const tableIcons = {
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
   };
 
- export default function Table(props) {
+ export default function Table({dataInfo}) {
+
+    const [columns, setColumns] = useState([]);
+    const [data, setData] = useState([]);
+
+    useEffect(() =>{
+        const schoolIDs = getSchoolIdsList(dataInfo);
+        console.log(schoolIDs);
+    }, [dataInfo]);
+
+    const getSchoolIdsList = dataInfo =>{  
+        const schoolIDs = [];
+        dataInfo.forEach((item) => {
+            if(schoolIDs.indexOf(item.academyId) === -1) schoolIDs.unshift(item.academyId);
+        });
+        return schoolIDs
+    }  
 
     return (
-    <div style={{'margin-top': "20"}}>
+    <div>
       <MaterialTable
-        title="Cell Header Styling Preview"
+        title="Issue devices count tracker"
         icons={tableIcons}
         columns={[
-          {
-            title: 'Name', field: 'name',
-            cellStyle: {
-              backgroundColor: '#039be5',
-              color: '#FFF'
-            },
-            headerStyle: {
-              backgroundColor: '#039be5',
-            }
-          },
           { title: 'Surname', field: 'surname' },
           { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
           {
