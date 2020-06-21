@@ -8,12 +8,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1
     },
-    menuButton: {
-        marginRight: theme.spacing(2)
-    },
-    title: {
-        flexGrow: 1
-    },
     logo: {
         maxWidth: 160,
         cursor: 'pointer'
@@ -24,7 +18,7 @@ export default function ButtonAppBar() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar>
                 <Toolbar>
                     <Toolbar>
                         <img src={require("./../../../img/Banner Logo 280x60.png")} alt="logo" className={classes.logo}/>
