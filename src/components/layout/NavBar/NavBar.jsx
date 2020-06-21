@@ -18,7 +18,7 @@ export default function ButtonAppBar() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <AppBar>
+            <AppBar position='static'>
                 <Toolbar>
                     <Toolbar>
                         <img src={require("./../../../img/Banner Logo 280x60.png")} alt="logo" className={classes.logo}/>

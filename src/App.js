@@ -1,12 +1,24 @@
-import React from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import NavBar from 'components/layout/NavBar';
+import Table from 'components/layout/Table';
+import datainfo from 'battery-data';
 
 
-function App() {
+
+const App = () => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const data = datainfo();
+    setData(data);
+  }, []);
+
   return (
-    <div className="App">
+    <Fragment>
       <NavBar />
-    </div>
+      <Table data={data} />
+    </Fragment>
   );
 }
 
