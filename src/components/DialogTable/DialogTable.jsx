@@ -36,25 +36,27 @@ export default function DialogTable(props) {
     const classes = useStyles();
 
     return (
-        <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="customized table">
-                <TableHead>
-                    <TableRow>
-                        <StyledTableCell align="center">Avg&nbsp;(%)</StyledTableCell>
-                        <StyledTableCell align="center">Serial&nbsp;(No.)</StyledTableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {props
-                        .data
-                        .map((row) => (
-                            <StyledTableRow key={row.name}>
-                                <StyledTableCell align="center">{Math.round(row.avgDailyDischarge * 100)}</StyledTableCell>
-                                <StyledTableCell align="center">{row.serialNumber}</StyledTableCell>
-                            </StyledTableRow>
-                        ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <div data-testid="dialogTable">
+            <TableContainer component={Paper}>
+                <Table className={classes.table} aria-label="customized table">
+                    <TableHead>
+                        <TableRow>
+                            <StyledTableCell align="center">Avg&nbsp;(%)</StyledTableCell>
+                            <StyledTableCell align="center">Serial&nbsp;(No.)</StyledTableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {props
+                            .data
+                            .map((row) => (
+                                <StyledTableRow key={row.name}>
+                                    <StyledTableCell align="center">{Math.round(row.avgDailyDischarge * 100)}</StyledTableCell>
+                                    <StyledTableCell align="center">{row.serialNumber}</StyledTableCell>
+                                </StyledTableRow>
+                            ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </div>
     );
 }
