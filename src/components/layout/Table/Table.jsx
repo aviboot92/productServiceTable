@@ -109,7 +109,7 @@ export default function Table({dataInfo}) {
     return (
         <div>
             <MaterialTable
-                title="Issue devices count tracker"
+                title="Issue-devices count tracker"
                 icons={tableIcons}
                 columns={columns}
                 data={data}
