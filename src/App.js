@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <NavBar />
+      <NavBar label='Academy Devices'/>
       <Table dataInfo={data} />
     </Fragment>
   );

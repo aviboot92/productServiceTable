@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DialogTable from './DialogTable';
-import {render} from '@testing-library/react';
 import ReactTestRenderer from 'react-test-renderer';
 
 it('should render without exploding', () => {
@@ -13,6 +12,7 @@ it('should render without exploding', () => {
             "avgDailyDischarge": 0.2121
         }
     ];
+    // It will be a failed test as data prop is missing which is compulsory for DialogTable at it should be in structure of data array as defined above
     ReactDOM.render(
         <DialogTable data={data}></DialogTable>, div)
 });

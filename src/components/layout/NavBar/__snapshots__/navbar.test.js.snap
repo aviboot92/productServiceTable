@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="makeStyles-root-1"
+  data-testid="navBar"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      >
+        <img
+          alt="logo"
+          className="makeStyles-logo-2"
+          src="Banner Logo 280x60.png"
+        />
+      </div>
+      <h6
+        className="MuiTypography-root makeStyles-title-3 MuiTypography-h6"
+      >
+        Academy
+      </h6>
+    </div>
+  </header>
+</div>
+`;
