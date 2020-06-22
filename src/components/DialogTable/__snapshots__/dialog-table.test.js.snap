@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="dialogTable"
+>
+  <div
+    className="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <table
+      aria-label="customized table"
+      className="MuiTable-root makeStyles-table-1"
+      role={null}
+    >
+      <thead
+        className="MuiTableHead-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root MuiTableRow-head"
+          role={null}
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-2 MuiTableCell-alignCenter"
+            scope="col"
+          >
+            Avg (%)
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-2 MuiTableCell-alignCenter"
+            scope="col"
+          >
+            Serial (No.)
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            106
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            TT-C67ML-A-0001-02522
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            46
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            1805C67HD02212
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            36
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            NGTT-0040
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            33
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            1805C67HD02244
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            32
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            1805C67HD02440
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            31
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            TT-C67ML-A-0001-02573
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            29
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            TT-C67ML-A-0001-01355
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-4"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            21
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignCenter"
+          >
+            1805C67HD01980
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
