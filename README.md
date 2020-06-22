@@ -38,3 +38,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 A table will be rendered using data from the database. Where you can click on headers to sort as per ther requirement. If you click on half arrow icon it will display list of devices w.r.t AcademyId which gives a better scope for the user to decide which Academy he need to visit earliest.
 
 
+
