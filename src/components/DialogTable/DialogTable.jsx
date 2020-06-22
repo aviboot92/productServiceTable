@@ -49,7 +49,7 @@ export default function DialogTable(props) {
                         {props
                             .data
                             .map((row) => (
-                                <StyledTableRow key={row.name}>
+                                <StyledTableRow key={row.serialNumber}>
                                     <StyledTableCell align="center">{Math.round(row.avgDailyDischarge * 100)}</StyledTableCell>
                                     <StyledTableCell align="center">{row.serialNumber}</StyledTableCell>
                                 </StyledTableRow>
